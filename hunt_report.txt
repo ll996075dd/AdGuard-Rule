@@ -1,0 +1,60 @@
+========================================================================
+ 广告子域围猎报告 (最稳妥方案: 列表面上升 + 护栏)
+========================================================================
+基线: E:\AI-python\2026-07-25-08-32-17\BlackList.final.txt
+输出: E:\AI-python\2026-07-25-08-32-17\BlackList.final.hunted.txt
+耗时: 3.0s
+
+扫描黑名单域名(网络规则): 1426786
+含广告标记(ad/ads/adv/adp)的域: 20561
+护栏跳过(ADP 各国站点 adp.<TLD>): 37
+新增猎杀规则(已去重/已排除被覆盖): 105
+输出总行数约为: 1426891 (原规则 + 新增)
+
+新增规则示例(前 30 条):
+  ||ad.10010.com.w.cdngslb.com^
+  ||ad.8.agent.aiw.api.btcc.com^
+  ||ad.8.agent.aiw.btcc.com^
+  ||ad.adesk.com^
+  ||ad.alibabacorp.com^
+  ||ad.alibabacorp.com.gds.alibabadns.com^
+  ||ad.anzhi.com^
+  ||ad.api.binance.com^
+  ||ad.binance.com^
+  ||ad.bitcoin.com^
+  ||ad.bw.bw.com^
+  ||ad.bw.com^
+  ||ad.cn.bitcoin.com^
+  ||ad.ddmob.com.cn^
+  ||ad.dev.api.binance.com^
+  ||ad.dotandad.com^
+  ||ad.ehello.jp^
+  ||ad.eu.api.binance.com^
+  ||ad.g.daum.net^
+  ||ad.gifshow.com^
+  ||ad.india.xiaomi.com^
+  ||ad.jp^
+  ||ad.libimseti.cz^
+  ||ad.logic-prod.viasat.io^
+  ||ad.logic-test.viasat.io^
+  ||ad.logic.viasat.io^
+  ||ad.ly^
+  ||ad.markettrack.com^
+  ||ad.mediamond.it^
+  ||ad.mobogenie.com^
+  ... 共 105 条
+
+⚠️  双标签'根级广告域'(ad/ads/adv.<TLD>, 整域封, 请人工过目是否认可):
+  ||ad.jp^
+  ||ad.ly^
+  ||ad.nl^
+  ||ad.nu^
+  ||ad.page^
+  ||ad.ru^
+  ||ads.ec^
+  ||ads.my^
+  ||adv.br^
+  ||adv.cat^
+
+结论: 仅封子域、不碰根域; 不引入通配符(DNS 层不可靠);
+不自动猎 adp.com(ADP)。下一步请用 stress_test.py 复验 0 误杀。
